@@ -979,9 +979,9 @@ if [ "$bypass" = "1" ]; then
 
     # Execute the commands once the rd is booted
     if [ "$os" = 'Linux' ]; then
-        sudo "$dir"/iproxy 2222 22 &
+        sudo "$dir"/iproxy 6413 22 &
     else
-        "$dir"/iproxy 2222 22 &
+        "$dir"/iproxy 6413 22 &
     fi
 
     while ! (remote_cmd "echo connected" &> /dev/null); do
